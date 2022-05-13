@@ -24,6 +24,8 @@ public class ChatServerHandler extends SimpleChannelInboundHandler<String> {
         Channel channel = ctx.channel();
         System.out.println(channel.remoteAddress() + "上线了");
 
+
+
         /**
          * 将该客户端上线信息推送给其他所有在线客户端
          * 该方法会将channelGroup中的所有channel遍历，并发送消息
