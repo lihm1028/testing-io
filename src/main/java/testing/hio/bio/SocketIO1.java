@@ -24,6 +24,8 @@ public class SocketIO1 {
             System.out.println("连接成功: client\t" + client.getInetAddress().getHostAddress() + "(" + client.getPort() + ")");
             count.incrementAndGet();//统计客户端的数量
             System.out.println("客户端的数量：" + count);
+
+            new Thread();
             new Thread(new Runnable() {
 
                 @Override

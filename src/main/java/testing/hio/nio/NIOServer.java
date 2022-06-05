@@ -8,6 +8,8 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
+import java.nio.channels.spi.AbstractSelector;
+import java.nio.channels.spi.SelectorProvider;
 import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.Set;
@@ -36,6 +38,7 @@ public class NIOServer {
         serverSocketChannel.configureBlocking(false);
 
         // 打开一个选择器Selector
+//        Selector selector1 = SelectorProvider.provider().openSelector();
         Selector selector = Selector.open();
 
         /**
